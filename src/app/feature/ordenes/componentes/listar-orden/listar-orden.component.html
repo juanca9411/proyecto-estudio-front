@@ -1,0 +1,46 @@
+<div class="content" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-11">
+                <div class="card">
+                    <div class="card-header">
+                        Lista de Ordenes
+                    </div>
+                        <div class="card-body">
+                            <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                            <table class="table table-striped"  aria-describedby="Listado de ordenes registradas">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Placa</th>
+                                        <th scope="col">Fecha de Ingreso</th>
+                                        <th scope="col">Fecha de salida</th>
+                                        <th scope="col">Total</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor='let orden of ordenes'>
+                                        <td id="placa">{{orden.placa}}</td>
+                                        <td id="fechaIngreso">{{orden.fechaIngreso}}</td>
+                                        <td id="fechaSalida">{{orden.fechaSalida}}</td>
+                                        <td id="valorTotal">{{orden.total}}</td>
+                                        <td id="adicionar">
+                                            <button type="button" class="btn btn-success btn-sm">Generar Salida</button>
+                                        </td>
+                                        <td id="adicionar">
+                                            <button type="button" class="btn btn-danger btn-sm">Eliminar Orden</button>
+                                        </td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-primary btn-sm">Adicionar</button>
+            </div>
+        </div>
+    </div>
+</div>
